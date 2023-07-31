@@ -9,6 +9,8 @@
 <h1>{{post.title}}</h1>
 <h2>{{post.date}}</h2>
 <p>{{post.text}}</p>
-<img src="{{post.image.url}}" alt="Post image"
+{% if post.image %}
+    <img src="{{post.image.url}}" alt="Post image"
+{% endif %}
 
 {% endblock content %}
