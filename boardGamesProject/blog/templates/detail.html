@@ -13,4 +13,12 @@
     <img src="{{post.image.url}}" alt="Post image"
 {% endif %}
 
+{% if recently_read %}
+
+<h3>Recently read</h3>
+{% for id,title in request.session.recently_read %}
+<a href = "{% url 'detail' id %}">{{title}}</a>
+{% endfor %}
+
+{% endif %}
 {% endblock content %}
